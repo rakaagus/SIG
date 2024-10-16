@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Kota DKI Jakarta</name>
+    <NetworkLink>
+      <name>Kota Terbaik Indoensia</name>
+      <Link>
+        <href><![CDATA[https://www.google.com/maps/d/u/0/kml?forcekml=1&mid=16NXoqTeL5J1Q1e52gEGZtLQUInN6vIs&lid=ZIr72WvskC0]]></href>
+      </Link>
+    </NetworkLink>
+  </Document>
+</kml>
