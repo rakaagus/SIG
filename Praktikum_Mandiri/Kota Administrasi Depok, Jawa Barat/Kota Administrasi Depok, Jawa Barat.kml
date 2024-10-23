@@ -2,11 +2,101 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Kota Administrasi Depok, Jawa Barat</name>
-    <NetworkLink>
-      <name>Kota Terbaik Indoensia</name>
-      <Link>
-        <href><![CDATA[https://www.google.com/maps/d/u/0/kml?forcekml=1&mid=16NXoqTeL5J1Q1e52gEGZtLQUInN6vIs&lid=vGBzljFafaE]]></href>
-      </Link>
-    </NetworkLink>
+    <Style id="poly-673AB7-1200-77-nodesc-normal">
+      <LineStyle>
+        <color>ffb73a67</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4db73a67</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-673AB7-1200-77-nodesc-highlight">
+      <LineStyle>
+        <color>ffb73a67</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4db73a67</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-673AB7-1200-77-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-673AB7-1200-77-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-673AB7-1200-77-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Kota Administrasi Depok, Jawa Barat</name>
+      <styleUrl>#poly-673AB7-1200-77-nodesc</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <tessellate>1</tessellate>
+            <coordinates>
+              106.8100519,-6.3156015,0
+              106.7817486,-6.3165299,0
+              106.7769421,-6.3288144,0
+              106.7721356,-6.3554297,0
+              106.7532528,-6.3595242,0
+              106.7456997,-6.3619127,0
+              106.7405499,-6.3909146,0
+              106.7357434,-6.410362,0
+              106.7305935,-6.4349261,0
+              106.7285336,-6.4615358,0
+              106.725787,-6.4755225,0
+              106.7405499,-6.487462,0
+              106.7590893,-6.5065646,0
+              106.7638958,-6.5256664,0
+              106.7872418,-6.5614805,0
+              106.8253506,-6.5611394,0
+              106.8335904,-6.5648912,0
+              106.84389,-6.5567054,0
+              106.8521298,-6.5430622,0
+              106.854533,-6.5294185,0
+              106.8802823,-6.4697232,0
+              106.9170178,-6.432538,0
+              106.919421,-6.400809,0
+              106.9164819,-6.3613255,0
+              106.9115246,-6.3646423,0
+              106.9080914,-6.3605478,0
+              106.8971051,-6.3704428,0
+              106.8830288,-6.3687368,0
+              106.877879,-6.3612303,0
+              106.8692959,-6.3564533,0
+              106.8692959,-6.3506527,0
+              106.8586529,-6.3516763,0
+              106.8486966,-6.3414398,0
+              106.8462933,-6.3366626,0
+              106.8373669,-6.349629,0
+              106.8356503,-6.354406,0
+              106.8230981,-6.3579134,0
+              106.8153943,-6.3574769,0
+              106.8092144,-6.3625951,0
+              106.7954815,-6.3625951,0
+              106.7934216,-6.3554297,0
+              106.7927349,-6.3499702,0
+              106.8030346,-6.3393924,0
+              106.801318,-6.331203,0
+              106.8100519,-6.3156015,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
   </Document>
 </kml>
