@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 7</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <style>
+        #map {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+    <script>
+        var map = L.map('map').setView([-6.402905, 106.778419], 12);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        var loi = {
+            "type": "FeatureCollection",
+            "features": [
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "Kampus": "Kampus B STT-NF Srengseng Sawah Jaksel",
+                        "Alamat": "JRPV+QH5, Jl. Setu Indah No.116, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16451",
+                        "Kota": "Depok"
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            106.83249337934558,
+                            -6.352308732538688
+                        ],
+                        "type": "Point"
+                    },
+                    "id": 0
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "Kampus": "Kampus A STT-NF Kelapa Dua Depok",
+                        "Alamat": "JRPV+QH5, Jl. Setu Indah No.116, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16451",
+                        "Kota": "Depok"
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            106.84444178122604,
+                            -6.362613958760385
+                        ],
+                        "type": "Point"
+                    },
+                    "id": 1
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "Kampus": "Kampus UI Depok",
+                        "Alamat": "Jl. Lingkar, Pondok Cina, Kecamatan Beji, Kota Depok, Jawa Barat 16424",
+                        "Kota": "Depok"
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            106.82723430052292,
+                            -6.35985517838273
+                        ],
+                        "type": "Point"
+                    },
+                    "id": 2
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "Kampus": "Kampus Univ Pancasila Lenteng Agung Jaksel",
+                        "Alamat": "Jl. Lenteng Agung Raya No.56, RT.1/RW.3, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12630",
+                        "Kota": "Jakarta Selatan"
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            106.83328388203833,
+                            -6.339732724634395
+                        ],
+                        "type": "Point"
+                    },
+                    "id": 3
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "Kampus": "Kampus Gunadarma Kelapa Dua Depok",
+                        "Alamat": "JRWV+4C2, Jalan Akses UI, Kelapa Dua, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16451",
+                        "Kota": "Depok"
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            106.8435455484739,
+                            -6.354541764462631
+                        ],
+                        "type": "Point"
+                    },
+                    "id": 4
+                },
+                {
+                    "type": "Feature",
+                    "properties": {
+                        "Kampus": "Kampus Polimedia Srengseng Sawah Jaksel",
+                        "Alamat": "Jl. Srengseng Sawah Raya No.17, RT.8/RW.3, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12630",
+                        "Kota": "Jakarta Selatan"
+                    },
+                    "geometry": {
+                        "coordinates": [
+                            106.82715245320199,
+                            -6.347140432253082
+                        ],
+                        "type": "Point"
+                    },
+                    "id": 5
+                }
+            ]
+        }
+
+        var geojson = L.geoJSON(loi, {
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(feature.properties.Kampus + "<br/>" +"Kota:" + feature.properties.Kota);
+            }
+        }).addTo(map);
+    </script>
+</body>
+
+</html>
